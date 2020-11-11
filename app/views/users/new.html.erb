@@ -9,14 +9,28 @@
 #   <input type="password" name="user[password]" />
 #   <input type="submit" value="Create Account" />
 # </form>
+
+
+# <%= form_tag("/users", method: "POST") do %>
+#   <%= label_tag(:username, "Username") %>
+#   <%= text_field_tag(:username) %>
+#   <%= label_tag(:email, "Email") %>
+#   <%= email_field_tag(:email) %>
+#   <%= label_tag(:password, "Password") %>
+#   <%= password_field_tag(:password) %>
+#   <%= submit_tag("submit") %>
+# <% end %>
 -->
 
-<%= form_tag("/users", method: "POST") do %>
-  <%= label_tag(:username, "Username") %>
-  <%= text_field_tag(:username) %>
-  <%= label_tag(:email, "Email") %>
-  <%= email_field_tag(:email) %>
-  <%= label_tag(:password, "Password") %>
-  <%= password_field_tag(:password) %>
-  <%= submit_tag("submit") %>
+
+<%= form_for @user do |f| %>
+  <div id="">
+  <h2><%= f.label :username, 'Enter your username' %><h2>
+  <%= f.text_field :username, class: 'field' %><br />
+  <h2><%= f.label :username, 'Enter your email' %><h2>
+  <%= f.email_field :email, placeholder: "user@mail.com", class: 'field' %><br />
+  <h2><%= f.label :username, 'Enter your password' %><h2>
+  <%= f.password_field :password, placeholder: "At least 6 characters", class: 'field'%><br />
+  <%= f.submit %>
+  </div>
 <% end %>

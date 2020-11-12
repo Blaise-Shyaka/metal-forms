@@ -2,10 +2,10 @@
 
 <%= render 'form' %><br>
 <%= link_to "New user", new_user_path(@user) %>
-<!--
+
 <%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Really delete the user?"}
 %>
--->
+
 
 <% if @user.errors.any? %>
   <h2> User couldn't be update</h2>

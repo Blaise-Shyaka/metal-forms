@@ -1,0 +1,18 @@
+<h1>Edit <span class="grey"><%= @user.username %></span> user</h1>
+
+<%= render 'form' %><br>
+<%= link_to "New user", new_user_path(@user) %>
+
+<%= link_to "Delete", user_path(@user), method: :delete, data: {confirm: "Really delete the user?"}
+%>
+
+
+<% if @user.errors.any? %>
+  <h2> User couldn't be update</h2>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+

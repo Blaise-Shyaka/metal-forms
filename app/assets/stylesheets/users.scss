@@ -1,0 +1,87 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  font-weight: 700;
+  color: rgb(60, 112, 255);
+}
+
+h1 {
+  background-color: dodgerblue;
+  color: rgb(255, 253, 123);
+  padding: 20px 0;
+}
+
+.grey {
+  color: rgb(255, 197, 36);
+  font-weight: 700;
+}
+
+h2 {
+  margin: 10px 0 10px 0;
+  color: #02246e;
+  font-size: 22px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #294e9e;
+  border: none;
+  color: #fff;
+  padding: 10px 26px;
+  text-decoration: none;
+  margin: 15px 2px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0c34e2;
+}
+
+p.flash {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  background-color: rgb(150, 0, 0);
+  color: #fff;
+}
+
+p.flash:empty {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-width: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  background: none;
+}
